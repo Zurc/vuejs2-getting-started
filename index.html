@@ -1,40 +1,12 @@
-<style>
-    .user {
-        border: 1px solid #ccc;
-        background-color: white;
-        padding: 10px;
-    }
-</style>
-
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
-
-<div id="app">
-    <p>{{ title }}</p>
-    <hr>
-    <app-user></app-user>
-    <app-user></app-user>
-</div>
-
-
-<script>
-    Vue.component('app-user', {
-        data: function() {
-            return {
-                users: [{
-                    username: 'Max'
-                }, {
-                    username: 'Chris'
-                }, {
-                    username: 'Anna'
-                }]
-            };
-        },
-        template: '<div><div class="user" v-for="user in users"><p>Username: {{ user.username }}</p></div></div>'
-    });
-    new Vue({
-        el: '#app',
-        data: {
-            title: 'Hello World!',
-        }
-    });
-</script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>vue-webpack</title>
+  </head>
+  <body>
+    <div id="app">
+    </div>
+    <script src="/dist/build.js"></script>
+  </body>
+</html>
